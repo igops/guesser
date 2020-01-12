@@ -26,7 +26,7 @@ $nextGuessTo = $GUESS_TO;
 $guessCounter = 0;
 
 while(true) {
-    $median = $nextGuessFrom + floor(($nextGuessTo - $nextGuessFrom) / 2);
+    $median = $nextGuessFrom + intval(($nextGuessTo - $nextGuessFrom) / 2);
     if ($DEBUG) {
         println(sprintf(DEBUG_START . "Let's reduce a range of guessing by half: [%d:%d] and [%d:%d]" . DEBUG_END, $nextGuessFrom, $median, $median+1, $nextGuessTo));
     }
