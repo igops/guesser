@@ -13,8 +13,7 @@ println();
 println(sprintf("Debug mode is %s", $DEBUG ? "ON" : "OFF"));
 println();
 println(sprintf("I guarantee the success in %d questions!", ceil(log($GUESS_TO - $GUESS_FROM, 2))));
-printl(sprintf("Think of a number between %d and %d and press Enter! \n",
-    $GUESS_FROM, $GUESS_TO));
+printl(sprintf("Think of a number between %d and %d and press Enter! \n", $GUESS_FROM, $GUESS_TO));
 readln();
 
 println("Great, now I'm gonna guess it!");
@@ -28,7 +27,8 @@ $guessCounter = 0;
 while(true) {
     $median = $nextGuessFrom + intval(($nextGuessTo - $nextGuessFrom) / 2);
     if ($DEBUG) {
-        println(sprintf(DEBUG_START . "Let's reduce a range of guessing by half: [%d:%d] and [%d:%d]" . DEBUG_END, $nextGuessFrom, $median, $median+1, $nextGuessTo));
+        println(sprintf(DEBUG_START . "Let's reduce a range of guessing by half: [%d:%d] and [%d:%d]" . DEBUG_END,
+            $nextGuessFrom, $median, $median+1, $nextGuessTo));
     }
     printl(sprintf("[#%02d] Is your number bigger than %d? (y/n): ", ++$guessCounter, $median));
     $yes = in_array(trim(strtoupper(readln())), ['Y','']);
