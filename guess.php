@@ -8,6 +8,7 @@ $GUESS_TO   = (int) ($argv[2] ?? 1000);
 $DEBUG      = strtoupper($argv[3] ?? '') === 'DEBUG';
 
 println();
+println("This message comes before welcome");
 println("********** Welcome to the Vadim's guesser! **********");
 println();
 println(sprintf("Debug mode is %s", $DEBUG ? "ON" : "OFF"));
