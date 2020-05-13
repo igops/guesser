@@ -10,6 +10,7 @@ $DEBUG      = strtoupper($argv[3] ?? '') === 'DEBUG';
 println();
 println("This message comes before welcome");
 println("********** Welcome to the Vadim's guesser! **********");
+println("Vadim will maintain the project then");
 println();
 println(sprintf("Debug mode is %s", $DEBUG ? "ON" : "OFF"));
 println();
